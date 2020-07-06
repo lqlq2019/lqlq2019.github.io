@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,8 +16,16 @@
 
   <!-- 页面元数据 -->
   
-    <title>Category: 通用 - LqBlog</title>
+    <title>【通用】常用正则表达式 - LqBlog</title>
   
+    <meta name="keywords" content="正则表达式">
+  
+  
+    <meta name="description" content="常用正则匹配手机号1&#x2F;^1[3|4|5|6|7|8|9]\d&#123;9&#125;$&#x2F;
+
+邮箱1&#x2F;^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$&#x2F;
+
+QQ号1&#x2F;^[1-9][0-9]&...">
   
 
   <!-- icon -->
@@ -272,25 +278,12 @@
     <div class='body-wrapper'>
       
 
-
 <div class='l_main'>
   
-    
-      
-  <section class="post-list ">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
+
   
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -300,11 +293,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
+  <h1 class="title">
     <a href="/2020/07/03/common/regex/">
       【通用】常用正则表达式
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -360,187 +353,187 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="常用正则匹配"><a href="#常用正则匹配" class="headerlink" title="常用正则匹配"></a>常用正则匹配</h3><h4 id="手机号"><a href="#手机号" class="headerlink" title="手机号"></a>手机号</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^1[3|4|5|6|7|8|9]\d&#123;9&#125;$&#x2F;</span><br></pre></td></tr></table></figure>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <h3 id="常用正则匹配"><a href="#常用正则匹配" class="headerlink" title="常用正则匹配"></a>常用正则匹配</h3><h4 id="手机号"><a href="#手机号" class="headerlink" title="手机号"></a>手机号</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^1[3|4|5|6|7|8|9]\d&#123;9&#125;$&#x2F;</span><br></pre></td></tr></table></figure>
 
 <h4 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$&#x2F;</span><br></pre></td></tr></table></figure>
 
 <h4 id="QQ号"><a href="#QQ号" class="headerlink" title="QQ号"></a>QQ号</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^[1-9][0-9]&#123;4,10&#125;$&#x2F;</span><br></pre></td></tr></table></figure>
 
 <h4 id="身份证号，1代15位，2代18位"><a href="#身份证号，1代15位，2代18位" class="headerlink" title="身份证号，1代15位，2代18位"></a>身份证号，1代15位，2代18位</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;(^\d&#123;8&#125;(0\d|10|11|12)([0-2]\d|30|31)\d&#123;3&#125;$)|(^\d&#123;6&#125;(18|19|20)\d&#123;2&#125;(0\d|10|11|12)([0-2]\d|30|31)\d&#123;3&#125;(\d|X|x)$)&#x2F;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/07/03/common/regex/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
+<a id="more"></a>
 
-          </div>
-        
-      
-    
-  </section>
+<h4 id="二代身份证号-18位数字-最后一位是校验位-可能为数字或字符X"><a href="#二代身份证号-18位数字-最后一位是校验位-可能为数字或字符X" class="headerlink" title="二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X"></a>二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^\d&#123;6&#125;(18|19|20)\d&#123;2&#125;(0\d|10|11|12)([0-2]\d|30|31)\d&#123;3&#125;(\d|X|x)$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="中国邮政编码"><a href="#中国邮政编码" class="headerlink" title="中国邮政编码"></a>中国邮政编码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^(0[1-7]|1[0-356]|2[0-7]|3[0-6]|4[0-7]|5[1-7]|6[1-7]|7[0-5]|8[013-6])\d&#123;4&#125;$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="16进制颜色-FFFFFF"><a href="#16进制颜色-FFFFFF" class="headerlink" title="16进制颜色(#FFFFFF)"></a>16进制颜色(#FFFFFF)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^#?([a-fA-F0-9]&#123;6&#125;|[a-fA-F0-9]&#123;3&#125;)$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="IPv4-127-0-0-1"><a href="#IPv4-127-0-0-1" class="headerlink" title="IPv4(127.0.0.1)"></a>IPv4(127.0.0.1)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.)&#123;3&#125;(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^(?:\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5])(?:\.(?:\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5]))&#123;3&#125;$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="国内座机号"><a href="#国内座机号" class="headerlink" title="国内座机号"></a>国内座机号</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;\d&#123;3&#125;-\d&#123;8&#125;|\d&#123;4&#125;-\d&#123;7&#125;&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="日期-1970-01-01-1970-1-1"><a href="#日期-1970-01-01-1970-1-1" class="headerlink" title="日期(1970-01-01,1970-1-1)"></a>日期(1970-01-01,1970-1-1)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^\d&#123;4&#125;(-)(1[0-2]|0?\d)\1([0-2]\d|\d|30|31)$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="24小时制时间（HH-mm-ss）"><a href="#24小时制时间（HH-mm-ss）" class="headerlink" title="24小时制时间（HH:mm:ss）"></a>24小时制时间（HH:mm:ss）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="12小时制时间（hh-mm-ss）"><a href="#12小时制时间（hh-mm-ss）" class="headerlink" title="12小时制时间（hh:mm:ss）"></a>12小时制时间（hh:mm:ss）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^(?:1[0-2]|0?[1-9]):[0-5]\d:[0-5]\d$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="视频链接地址"><a href="#视频链接地址" class="headerlink" title="视频链接地址"></a>视频链接地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^https?:\&#x2F;\&#x2F;.*?(?:swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$&#x2F;i</span><br></pre></td></tr></table></figure>
+
+<h4 id="图片链接地址"><a href="#图片链接地址" class="headerlink" title="图片链接地址"></a>图片链接地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^https?:\&#x2F;\&#x2F;.*?(?:gif|png|jpg|jpeg|webp|svg|psd|bmp|tif)$&#x2F;i</span><br></pre></td></tr></table></figure>
+
+<h4 id="统一社会信用代码"><a href="#统一社会信用代码" class="headerlink" title="统一社会信用代码"></a>统一社会信用代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^[0-9A-HJ-NPQRTUWXY]&#123;2&#125;\d&#123;6&#125;[0-9A-HJ-NPQRTUWXY]&#123;10&#125;$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="迅雷链接"><a href="#迅雷链接" class="headerlink" title="迅雷链接"></a>迅雷链接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^thunderx?:\&#x2F;\&#x2F;[a-zA-Z\d]+&#x3D;$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ed2k链接"><a href="#ed2k链接" class="headerlink" title="ed2k链接"></a>ed2k链接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^ed2k:\&#x2F;\&#x2F;\|file\|.+\|\&#x2F;$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="磁力链接"><a href="#磁力链接" class="headerlink" title="磁力链接"></a>磁力链接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^magnet:\?xt&#x3D;urn:btih:[0-9a-fA-F]&#123;40,&#125;.*$&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="带端口号的网址-或ip"><a href="#带端口号的网址-或ip" class="headerlink" title="带端口号的网址(或ip)"></a>带端口号的网址(或ip)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^(((ht|f)tps?):\&#x2F;\&#x2F;)?[\w\-]+(\.[\w\-]+)+:\d&#123;0,5&#125;\&#x2F;?&#x2F;</span><br></pre></td></tr></table></figure>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+
+  
+
   
     
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
     
 
-  
-
-
-    
-  
-
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-
-<section class="widget grid shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-lightbulb fa-fw" aria-hidden="true"></i><span class='name'>站内导航</span>
-    
-  </header>
-
-
+<section class="widget copyright  desktop mobile">
   <div class='content'>
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" title="/" href="/"
+    
+      <blockquote>
+        
           
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
           
-          id="home">
+        
           
-            <i class="fas fa-file-code fa-fw" aria-hidden="true"></i>
+            <p>本文永久链接是：<a href=https://shuimianbuzu.github.io/2020/07/03/common/regex/>https://shuimianbuzu.github.io/2020/07/03/common/regex/</a></p>
           
-          近期发表
-        </a>
-      
-        <a class="flat-box" title="/archives/" href="/archives/"
-          
-          
-          id="archives">
-          
-            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
-          
-          文章归档
-        </a>
-      
-        <a class="flat-box" title="/friends/" href="/friends/"
-          
-          
-          id="friends">
-          
-            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
-          
-          我的友链
-        </a>
-      
-        <a class="flat-box" title="https://volantis.js.org/" href="https://volantis.js.org/"
-          
-          
-          id="https:volantisjsorg">
-          
-            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-          
-          小站主题
-        </a>
-      
-        <a class="flat-box" title="/about/" href="/about/"
-          
-          
-          id="about">
-          
-            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
-          
-          关于小站
-        </a>
-      
-        <a class="flat-box" title="https://github.com/shuimianbuzu/" href="https://github.com/shuimianbuzu/"
-          
-          
-          id="https:githubcomshuimianbuzu">
-          
-            <i class="fab fa-github fa-fw" aria-hidden="true"></i>
-          
-          开源项目
-        </a>
-      
-    </div>
+        
+      </blockquote>
+    
   </div>
 </section>
 
   
 
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-04T01:08:55+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020-07-04</p>
+  </a>
+</div>
+
+        
+      
+        
+          
   
-    
-    
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>正则表达式</p></a></div>
 
 
-    <div class='content'>
-      <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            id="categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(1)</div></a></li>
+      
         
-          <li><a class="flat-box"
-            title="/categories/%E8%BF%90%E7%BB%B4/" href="/categories/%E8%BF%90%E7%BB%B4/"
-            id="categoriesE8BF90E7BBB4"
-            ><div class='name'>运维</div><div class='badge'>(1)</div></a></li>
+          
+
         
-          <li><a class="flat-box"
-            title="/categories/%E9%80%9A%E7%94%A8/" href="/categories/%E9%80%9A%E7%94%A8/"
-            id="categoriesE9809AE794A8"
-            ><div class='name'>通用</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+      
     </div>
   </section>
 
 
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/2020/07/06/redis/redis-summary/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【Redis】Redis知识总结</p>
+                <p class='content'>Redis的概述Redis 是速度非常快的非关系型（NoSQL）内存key-value存储数据库。键的类型只能为字符串，值支持字符串、列表、集合、有序集合、散列表等多种数据类型。
+Redis 支...</p>
+              </a>
+            
+            
+              <a class='next' href='/2020/07/03/linux/garish/'>
+                <p class='title'>【Linux】花里胡哨的Linux命令<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>sl (跑火车)
+环境参数：CentOS
+
+
+下载 Epel-Release
+1wget http:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '【通用】常用正则表达式',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
   
 
   
     
     
-  
 
-  <section class="widget tagcloud shadow desktop mobile">
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>索引目录</span>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 14px; color: #999">正则表达式</a> <a href="/tags/%E7%BC%93%E5%AD%98%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">缓存中间件</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用正则匹配"><span class="toc-text">常用正则匹配</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#手机号"><span class="toc-text">手机号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#邮箱"><span class="toc-text">邮箱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#QQ号"><span class="toc-text">QQ号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#身份证号，1代15位，2代18位"><span class="toc-text">身份证号，1代15位，2代18位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二代身份证号-18位数字-最后一位是校验位-可能为数字或字符X"><span class="toc-text">二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中国邮政编码"><span class="toc-text">中国邮政编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16进制颜色-FFFFFF"><span class="toc-text">16进制颜色(#FFFFFF)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IPv4-127-0-0-1"><span class="toc-text">IPv4(127.0.0.1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子网掩码"><span class="toc-text">子网掩码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#国内座机号"><span class="toc-text">国内座机号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日期-1970-01-01-1970-1-1"><span class="toc-text">日期(1970-01-01,1970-1-1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24小时制时间（HH-mm-ss）"><span class="toc-text">24小时制时间（HH:mm:ss）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12小时制时间（hh-mm-ss）"><span class="toc-text">12小时制时间（hh:mm:ss）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频链接地址"><span class="toc-text">视频链接地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图片链接地址"><span class="toc-text">图片链接地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#统一社会信用代码"><span class="toc-text">统一社会信用代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#迅雷链接"><span class="toc-text">迅雷链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ed2k链接"><span class="toc-text">ed2k链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#磁力链接"><span class="toc-text">磁力链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#带端口号的网址-或ip"><span class="toc-text">带端口号的网址(或ip)</span></a></li></ol></li></ol>
     </div>
   </section>
 
