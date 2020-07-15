@@ -21,11 +21,11 @@
     <meta name="keywords" content="Redis,缓存中间件">
   
   
-    <meta name="description" content="Redis的概述Redis 是速度非常快的非关系型（NoSQL）内存key-value存储数据库。键的类型只能为字符串，值支持字符串、列表、集合、有序集合、散列表等多种数据类型。
-Redis 支持数据磁盘持久化存储，支持主从，支持分片。
+    <meta name="description" content="Redis的概述Redis是速度非常快的非关系型（NoSQL）内存key-value存储数据库。键的类型只能为字符串，值支持字符串、列表、集合、有序集合、散列表等多种数据类型。
+Redis支持数据磁盘持久化存储，支持主从，支持分片。
 
 Redis为什么这么快（拥有10万+QPS）
-Redis由C语言编写，完全...">
+Redis由C语言编写，完全基于...">
   
 
   <!-- icon -->
@@ -357,8 +357,8 @@ Redis由C语言编写，完全...">
         <div class="article-entry" itemprop="articleBody">
           
           
-          <h3 id="Redis的概述"><a href="#Redis的概述" class="headerlink" title="Redis的概述"></a>Redis的概述</h3><p>Redis 是速度非常快的非关系型（NoSQL）内存key-value存储数据库。键的类型只能为字符串，值支持字符串、列表、集合、有序集合、散列表等多种数据类型。</p>
-<p>Redis 支持数据磁盘持久化存储，支持主从，支持分片。</p>
+          <h3 id="Redis的概述"><a href="#Redis的概述" class="headerlink" title="Redis的概述"></a>Redis的概述</h3><p>Redis是速度非常快的非关系型（NoSQL）内存key-value存储数据库。键的类型只能为字符串，值支持字符串、列表、集合、有序集合、散列表等多种数据类型。</p>
+<p>Redis支持数据磁盘持久化存储，支持主从，支持分片。</p>
 <ul>
 <li>Redis为什么这么快（拥有10万+QPS）<ol>
 <li>Redis由C语言编写，完全基于内存，请求基本都是纯粹的内存操作，执行效率高</li>
@@ -485,53 +485,44 @@ Redis由C语言编写，完全...">
 <li><p>计数器、缓存、会话缓存、分布式锁、消息队列</p>
 </li>
 <li><p>Redis实现分布式锁</p>
-<ul>
-<li><p>SET key value [EX seconds] [PX milliseconds] [NX|XX]</p>
-<ul>
-<li><p>EX seconds：设置键的过期时间为second秒；PX milliseconds：设置键的过期时间为milliseconds毫秒；NX：只要键不存在才对键进行设置操作；XX：只要键存在才对键进行设置操作；SET操作完成时，返回OK，否则返回nii</p>
-</li>
-<li><p><code>set name &quot;lisi&quot; ex 60 nx</code>说明：因为键存在，所以60秒之内不能修改value的值  </p>
-</li>
+<ol>
+<li>SET key value [EX seconds] [PX milliseconds] [NX|XX]  <ul>
+<li>EX seconds：设置键的过期时间为second秒；PX milliseconds：设置键的过期时间为milliseconds毫秒；NX：只要键不存在才对键进行设置操作；XX：只要键存在才对键进行设置操作；SET操作完成时，返回OK，否则返回nil</li>
+<li><code>set name &quot;lisi&quot; ex 60 nx</code>说明：因为键存在，所以60秒之内不能修改value的值  </li>
+<li>解决SETNX和EXPIRE实现分布式锁带来的风险问题</li>
 </ul>
 </li>
-<li><p>SETNX  key  value：如果key不存在，则创建并赋值；若存在则设置失败</p>
-<blockquote>
-<p>返回值：返回1设置成功，返回0设置失败，时间复杂度为O(1)</p>
-</blockquote>
-</li>
+<li>使用SETNX和EXPIRE实现分布式锁<ul>
+<li>SETNX  key  value：如果key不存在，则创建并赋值，若存在则设置失败；返回为1设置成功，返回0则设置失败，时间复杂度为O(1)</li>
+<li>EXPIRE key seconds 设置key的生存时间，用于解决SETNX长期有效问题</li>
+<li>风险：当只执行了SETNX程序就挂掉了，而EXPIRE未执行时，key就会被一直占用，后面独占资源逻辑的程序将不会执行，违背了Redis操作的原子性</li>
 </ul>
+</li>
+</ol>
 </li>
 <li><p>Redis实现异步队列</p>
-<ul>
+<ol>
 <li><p>使用List作为队列，rpush生产消息，lpop消费消息</p>
 <ul>
-<li><p>缺点：没有等待队列里有值就直接消费</p>
-</li>
-<li><p>解决：通过应用层引入Sleep机制调用LPOP重试</p>
-</li>
+<li>缺点：没有等待队列里有值就直接消费</li>
+<li>解决：通过应用层引入Sleep机制调用LPOP重试</li>
 </ul>
 </li>
 <li><p>BLPOP key [key …] timeout：阻塞直到队列有消息或者超时</p>
 <ul>
-<li><p><code>blpop mylist 30</code></p>
-</li>
-<li><p>缺点：生产出的数据只能提供一个消费者消费</p>
-</li>
+<li><code>blpop mylist 30</code></li>
+<li>缺点：生产出的数据只能提供一个消费者消费</li>
 </ul>
 </li>
 <li><p>pub/sub：主题订阅者模式，实现一对多的消费队列</p>
 <ul>
-<li><p>发送者(pub)发送消息，订阅者(sub)接收消息</p>
-</li>
-<li><p>Redis客户端（订阅者）可以订阅任意数量的频道</p>
-</li>
-<li><p>消息发布是无状态的，无法保证可达，可以使用kafka等消息队列解决</p>
-</li>
-<li><p>订阅消息<code>subscribe myTopic</code>，发布消息<code>publish myTopic &quot;hello&quot;</code></p>
-</li>
+<li>发送者(pub)发送消息，订阅者(sub)接收消息</li>
+<li>Redis客户端（订阅者）可以订阅任意数量的频道</li>
+<li>消息发布是无状态的，无法保证可达，可以使用kafka等消息队列解决</li>
+<li>订阅消息<code>subscribe myTopic</code>，发布消息<code>publish myTopic &quot;hello&quot;</code></li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 <li><p>当Redis大量的key同时过期，清除耗时导致卡顿，可以给key设置过期时间加上随机值解决</p>
 </li>
@@ -612,10 +603,10 @@ Redis由C语言编写，完全...">
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-06T19:28:39+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-07T12:06:55+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020-07-06</p>
+    <p>更新于：2020-07-07</p>
   </a>
 </div>
 
@@ -641,6 +632,17 @@ Redis由C语言编写，完全...">
         
         
           <div class="prev-next">
+            
+              <a class='prev' href='/2020/07/07/common/designprinciple/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【通用】软件的设计原则</p>
+                <p class='content'>开闭原则
+定义：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭
+优点：提高软件系统的可复用性和可维护性
+
+单一职责原则
+定义：不要存在多于一个导致类变更的原因
+一个类/接口/方法只负责一...</p>
+              </a>
             
             
               <a class='next' href='/2020/07/03/common/regex/'>
