@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>【IDE】IDEA快捷键+插件</title>
+      <link href="/2020/08/03/IDE/idea/"/>
+      <url>/2020/08/03/IDE/idea/</url>
+      
+        <content type="html"><![CDATA[<h3 id="IDEA常用快捷键"><a href="#IDEA常用快捷键" class="headerlink" title="IDEA常用快捷键"></a>IDEA常用快捷键</h3><ul><li><p>全局搜索,局部搜索</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Shift + F , Ctrl + F</span><br></pre></td></tr></table></figure></li><li><p>代码中直接换行、格式化该行代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Shift + Enter</span><br></pre></td></tr></table></figure></li><li><p>自动生成返回对象声明、接口自动创建实现类、自动修正与导包</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Alt + Enter</span><br></pre></td></tr></table></figure></li></ul><a id="more"></a><ul><li><p>自动创建类接口的测试方法,与右键选择GO TO &gt; Test用法一致</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Shift + T</span><br></pre></td></tr></table></figure></li><li><p>自动创建构造方法getter,setter,toString等方法</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Alt + Ins(Insert)</span><br></pre></td></tr></table></figure></li><li><p>移除所有未使用的类和import包</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Alt + O</span><br></pre></td></tr></table></figure></li><li><p>格式化选中代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Alt + L</span><br></pre></td></tr></table></figure></li><li><p>转换大小写</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Shift + U</span><br></pre></td></tr></table></figure></li><li><p>复制当前行,删除当前行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + D , Ctrl + Y</span><br></pre></td></tr></table></figure></li></ul><h3 id="好用的IDEA插件"><a href="#好用的IDEA插件" class="headerlink" title="好用的IDEA插件"></a>好用的IDEA插件</h3><table><thead><tr><th>插件名称</th><th>描述与使用</th></tr></thead><tbody><tr><td>Translation</td><td>翻译插件，快捷键（Ctrl+Shift+Y）</td></tr><tr><td>Free  MyBatis Plugin</td><td>MyBatis的接口和XML实现之前的跳转插件，Ctrl+Alt+点击方法</td></tr><tr><td>Restful Toolkit</td><td>快速定位Controller中的Restful风格的URL，快捷键（Ctrl+\）</td></tr><tr><td>Alibaba java coding Guidelines</td><td>阿里规约扫描插件</td></tr><tr><td>Sequence Diagram</td><td>方便看源码的时序图插件，快捷键（Ctrl+Alt+U）</td></tr><tr><td>Maven Helper</td><td>用于解决maven冲突插件</td></tr><tr><td>actiBPM</td><td>工作流引擎activiti插件</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> IDE </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IDEA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【设计模式】单例模式</title>
       <link href="/2020/07/07/designpattern/singleton/"/>
       <url>/2020/07/07/designpattern/singleton/</url>
