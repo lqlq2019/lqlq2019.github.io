@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,8 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>Category: 运维 - LqBlog</title>
+    <title>【Git】Git 常用命令 - LqBlog</title>
   
+    <meta name="keywords" content="Git">
+  
+  
+    <meta name="description" content="常用命令速查表">
   
 
   <!-- icon -->
@@ -272,25 +274,12 @@
     <div class='body-wrapper'>
       
 
-
 <div class='l_main'>
   
-    
-      
-  <section class="post-list ">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
+
   
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -300,11 +289,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/2020/07/03/linux/garish/">
-      【Linux】花里胡哨的Linux命令
+  <h1 class="title">
+    <a href="/2020/09/04/versioncontrol/git-command-list/">
+      【Git】Git 常用命令
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -327,7 +316,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于2020-07-03</p>
+    <p>发布于2020-09-04</p>
   </a>
 </div>
 
@@ -337,9 +326,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E8%BF%90%E7%BB%B4/' rel="nofollow">
+    <a href='/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>运维</p>
+      <p>版本控制</p>
     </a>
   </div>
 
@@ -360,210 +349,337 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="sl-跑火车"><a href="#sl-跑火车" class="headerlink" title="sl (跑火车)"></a>sl (跑火车)</h3><blockquote>
-<p>环境参数：CentOS</p>
-</blockquote>
-<ol>
-<li><p>下载 Epel-Release</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x2F;6&#x2F;x86_64&#x2F;epel-release-6-8.noarch.rpm</span><br></pre></td></tr></table></figure>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <h3 id="常用命令速查表"><a href="#常用命令速查表" class="headerlink" title="常用命令速查表"></a>常用命令速查表</h3><p><img src="https://s1.ax1x.com/2020/09/04/wic8QH.png" alt="Git常用命令速查表"></p>
+<a id="more"></a>
+
+<h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><ul>
+<li><p>在当前目录新建一个Git代码库<br>$ git init</p>
 </li>
-<li><p>安装 epel-release-6-8.noarch.rpm</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y epel-release-6-8.noarch.rpm</span><br></pre></td></tr></table></figure>
+<li><p>新建一个目录，将其初始化为Git代码库<br>$ git init [project-name]</p>
 </li>
-<li><p>安装安装sl命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y sl</span><br></pre></td></tr></table></figure>
+<li><p>下载一个项目和它的整个代码历史<br>$ git clone [url]</p>
 </li>
-<li><p>运行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sl</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/07/03/linux/garish/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
+</ul>
+<hr>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li><p>显示当前的Git配置<br>$ git config –list</p>
+</li>
+<li><p>编辑Git配置文件<br>$ git config -e [–global]</p>
+</li>
+<li><p>设置提交代码时的用户信息<br>$ git config [–global] user.name “[name]”<br>$ git config [–global] user.email “[email address]”</p>
+</li>
+</ul>
+<hr>
+<h3 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h3><ul>
+<li><p>添加指定文件到暂存区<br>$ git add [file1] [file2] …</p>
+</li>
+<li><p>添加指定目录到暂存区，包括子目录<br>$ git add [dir]</p>
+</li>
+<li><p>添加当前目录的所有文件到暂存区<br>$ git add .</p>
+</li>
+<li><p>添加每个变化前，都会要求确认;对于同一个文件的多处变化，可以实现分次提交<br>$ git add -p</p>
+</li>
+<li><p>删除工作区文件，并且将这次删除放入暂存区<br>$ git rm [file1] [file2] …</p>
+</li>
+<li><p>停止追踪指定文件，但该文件会保留在工作区<br>$ git rm –cached [file]</p>
+</li>
+<li><p>改名文件，并且将这个改名放入暂存区<br>$ git mv [file-original] [file-renamed]</p>
+</li>
+</ul>
+<hr>
+<h3 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h3><ul>
+<li><p>提交暂存区到仓库区<br>$ git commit -m [message]</p>
+</li>
+<li><p>提交暂存区的指定文件到仓库区<br>$ git commit [file1] [file2] … -m [message]</p>
+</li>
+<li><p>提交工作区自上次commit之后的变化，直接到仓库区<br>$ git commit -a</p>
+</li>
+<li><p>提交时显示所有diff信息<br>$ git commit -v</p>
+</li>
+<li><p>使用一次新的commit，替代上一次提交;如果代码没有任何新变化，则用来改写上一次commit的提交信息<br>$ git commit –amend -m [message]</p>
+</li>
+<li><p>重做上一次commit，并包括指定文件的新变化<br>$ git commit –amend [file1] [file2] …</p>
+</li>
+</ul>
+<hr>
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><ul>
+<li><p>列出所有本地分支<br>$ git branch</p>
+</li>
+<li><p>列出所有远程分支<br>$ git branch -r</p>
+</li>
+<li><p>列出所有本地分支和远程分支<br>$ git branch -a</p>
+</li>
+<li><p>新建一个分支，但依然停留在当前分支<br>$ git branch [branch-name]</p>
+</li>
+<li><p>新建一个分支，并切换到该分支<br>$ git checkout -b [branch]</p>
+</li>
+<li><p>新建一个分支，指向指定commit<br>$ git branch [branch] [commit]</p>
+</li>
+<li><p>新建一个分支，与指定的远程分支建立追踪关系<br>$ git branch –track [branch] [remote-branch]</p>
+</li>
+<li><p>切换到指定分支，并更新工作区<br>$ git checkout [branch-name]</p>
+</li>
+<li><p>切换到上一个分支<br>$ git checkout -</p>
+</li>
+<li><p>建立追踪关系，在现有分支与指定的远程分支之间<br>$ git branch –set-upstream [branch] [remote-branch]</p>
+</li>
+<li><p>合并指定分支到当前分支<br>$ git merge [branch]</p>
+</li>
+<li><p>选择一个commit，合并进当前分支<br>$ git cherry-pick [commit]</p>
+</li>
+<li><p>删除分支<br>$ git branch -d [branch-name]</p>
+</li>
+<li><p>删除远程分支<br>$ git push origin –delete [branch-name]<br>$ git branch -dr [remote/branch]</p>
+</li>
+</ul>
+<hr>
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><ul>
+<li><p>列出所有tag<br>$ git tag</p>
+</li>
+<li><p>新建一个tag在当前commit<br>$ git tag [tag]</p>
+</li>
+<li><p>新建一个tag在指定commit<br>$ git tag [tag] [commit]</p>
+</li>
+<li><p>删除本地tag<br>$ git tag -d [tag]</p>
+</li>
+<li><p>删除远程tag<br>$ git push origin :refs/tags/[tagName]</p>
+</li>
+<li><p>查看tag信息<br>$ git show [tag]</p>
+</li>
+<li><p>提交指定tag<br>$ git push [remote] [tag]</p>
+</li>
+<li><p>提交所有tag<br>$ git push [remote] –tags</p>
+</li>
+<li><p>新建一个分支，指向某个tag<br>$ git checkout -b [branch] [tag]</p>
+</li>
+</ul>
+<hr>
+<h3 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h3><ul>
+<li><p>显示有变更的文件<br>$ git status</p>
+</li>
+<li><p>显示当前分支的版本历史<br>$ git log</p>
+</li>
+<li><p>显示commit历史，以及每次commit发生变更的文件<br>$ git log –stat</p>
+</li>
+<li><p>搜索提交历史，根据关键词<br>$ git log -S [keyword]</p>
+</li>
+<li><p>显示某个commit之后的所有变动，每个commit占据一行<br>$ git log [tag] HEAD –pretty=format:%s</p>
+</li>
+<li><p>显示某个commit之后的所有变动，其”提交说明”必须符合搜索条件<br>$ git log [tag] HEAD –grep feature</p>
+</li>
+<li><p>显示某个文件的版本历史，包括文件改名<br>$ git log –follow [file]<br>$ git whatchanged [file]</p>
+</li>
+<li><p>显示指定文件相关的每一次diff<br>$ git log -p [file]</p>
+</li>
+<li><p>显示过去5次提交<br>$ git log -5 –pretty –oneline</p>
+</li>
+<li><p>显示所有提交过的用户，按提交次数排序<br>$ git shortlog -sn</p>
+</li>
+<li><p>显示指定文件是什么人在什么时间修改过<br>$ git blame [file]</p>
+</li>
+<li><p>显示暂存区和工作区的差异<br>$ git diff</p>
+</li>
+<li><p>显示暂存区和上一个commit的差异<br>$ git diff –cached [file]</p>
+</li>
+<li><p>显示工作区与当前分支最新commit之间的差异<br>$ git diff HEAD</p>
+</li>
+<li><p>显示两次提交之间的差异<br>$ git diff [first-branch]…[second-branch]</p>
+</li>
+<li><p>显示今天你写了多少行代码<br>$ git diff –shortstat “@{0 day ago}”</p>
+</li>
+<li><p>显示某次提交的元数据和内容变化<br>$ git show [commit]</p>
+</li>
+<li><p>显示某次提交发生变化的文件<br>$ git show –name-only [commit]</p>
+</li>
+<li><p>显示某次提交时，某个文件的内容<br>$ git show [commit]:[filename]</p>
+</li>
+<li><p>显示当前分支的最近几次提交<br>$ git reflog</p>
+</li>
+</ul>
+<hr>
+<h3 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h3><ul>
+<li><p>下载远程仓库的所有变动<br>$ git fetch [remote]</p>
+</li>
+<li><p>显示所有远程仓库<br>$ git remote -v</p>
+</li>
+<li><p>显示某个远程仓库的信息<br>$ git remote show [remote]</p>
+</li>
+<li><p>增加一个新的远程仓库，并命名<br>$ git remote add [shortname] [url]</p>
+</li>
+<li><p>取回远程仓库的变化，并与本地分支合并<br>$ git pull [remote] [branch]</p>
+</li>
+<li><p>上传本地指定分支到远程仓库<br>$ git push [remote] [branch]</p>
+</li>
+<li><p>强行推送当前分支到远程仓库，即使有冲突<br>$ git push [remote] –force</p>
+</li>
+<li><p>推送所有分支到远程仓库<br>$ git push [remote] –all</p>
+</li>
+</ul>
+<hr>
+<h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><ul>
+<li><p>恢复暂存区的指定文件到工作区<br>$ git checkout [file]</p>
+</li>
+<li><p>恢复某个commit的指定文件到暂存区和工作区<br>$ git checkout [commit] [file]</p>
+</li>
+<li><p>恢复暂存区的所有文件到工作区<br>$ git checkout .</p>
+</li>
+<li><p>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变<br>$ git reset [file]</p>
+</li>
+<li><p>重置暂存区与工作区，与上一次commit保持一致<br>$ git reset –hard</p>
+</li>
+<li><p>重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变<br>$ git reset [commit]</p>
+</li>
+<li><p>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致<br>$ git reset –hard [commit]</p>
+</li>
+<li><p>重置当前HEAD为指定commit，但保持暂存区和工作区不变<br>$ git reset –keep [commit]</p>
+</li>
+<li><p>新建一个commit，用来撤销指定commit;后者的所有变化都将被前者抵消，并且应用到当前分支<br>$ git revert [commit]</p>
+</li>
+<li><p>暂时将未提交的变化移除，稍后再移入<br>$ git stash<br>$ git stash pop</p>
+</li>
+</ul>
+<hr>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>生成一个可供发布的压缩包<br>$ git archive</li>
+</ul>
+<p><a href="https://gitee.com/all-about-git" target="_blank" rel="noopener">Git命令清单来源</a></p>
 
-          </div>
-        
-      
-    
-  </section>
+          
+            <div class='article_footer'>
+              
+                
+  
+
+  
+
   
     
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
     
 
-  
-
-
-    
-  
-
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-
-<section class="widget grid shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-lightbulb fa-fw" aria-hidden="true"></i><span class='name'>站内导航</span>
-    
-  </header>
-
-
+<section class="widget copyright  desktop mobile">
   <div class='content'>
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" title="/" href="/"
+    
+      <blockquote>
+        
           
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC 4.0 BY-SA</a> 版权协议</p>
+
           
-          id="home">
+        
           
-            <i class="fas fa-file-code fa-fw" aria-hidden="true"></i>
+            <p>本文永久链接是：<a href=https://shuimianbuzu.github.io/2020/09/04/versioncontrol/git-command-list/>https://shuimianbuzu.github.io/2020/09/04/versioncontrol/git-command-list/</a></p>
           
-          近期发表
-        </a>
-      
-        <a class="flat-box" title="/archives/" href="/archives/"
-          
-          
-          id="archives">
-          
-            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
-          
-          文章归档
-        </a>
-      
-        <a class="flat-box" title="/friends/" href="/friends/"
-          
-          
-          id="friends">
-          
-            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
-          
-          我的友链
-        </a>
-      
-        <a class="flat-box" title="https://volantis.js.org/" href="https://volantis.js.org/"
-          
-          
-          id="https:volantisjsorg">
-          
-            <i class="fas fa-flag fa-fw" aria-hidden="true"></i>
-          
-          小站主题
-        </a>
-      
-        <a class="flat-box" title="/about/" href="/about/"
-          
-          
-          id="about">
-          
-            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
-          
-          关于小站
-        </a>
-      
-        <a class="flat-box" title="https://github.com/shuimianbuzu/" href="https://github.com/shuimianbuzu/"
-          
-          
-          id="https:githubcomshuimianbuzu">
-          
-            <i class="fab fa-github fa-fw" aria-hidden="true"></i>
-          
-          开源项目
-        </a>
-      
-    </div>
+        
+      </blockquote>
+    
   </div>
 </section>
 
   
 
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-04T00:35:23+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020-09-04</p>
+  </a>
+</div>
+
+        
+      
+        
+          
   
-    
-    
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Git/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Git</p></a></div>
 
 
-    <div class='content'>
-      <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/IDE/" href="/categories/IDE/"
-            id="categoriesIDE"
-            ><div class='name'>IDE</div><div class='badge'>(1)</div></a></li>
+      
         
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            id="categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(1)</div></a></li>
+          
+
         
-          <li><a class="flat-box"
-            title="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"
-            id="categoriesE78988E69CACE68EA7E588B6"
-            ><div class='name'>版本控制</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"
-            id="categoriesE8AEBEE8AEA1E6A8A1E5BC8F"
-            ><div class='name'>设计模式</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BF%90%E7%BB%B4/" href="/categories/%E8%BF%90%E7%BB%B4/"
-            id="categoriesE8BF90E7BBB4"
-            ><div class='name'>运维</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%80%9A%E7%94%A8/" href="/categories/%E9%80%9A%E7%94%A8/"
-            id="categoriesE9809AE794A8"
-            ><div class='name'>通用</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
+      
     </div>
   </section>
 
 
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/08/03/IDE/idea/'>
+                <p class='title'>【IDE】IDEA快捷键+插件<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>IDEA常用快捷键
+全局搜索,局部搜索
+1Ctrl + Shift + F , Ctrl + F
+
+代码中直接换行、格式化该行代码
+1Ctrl + Shift + Enter
+
+自动生成返回对象...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '【Git】Git 常用命令',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
   
 
   
     
     
-  
 
-  <section class="widget tagcloud shadow desktop mobile">
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>索引目录</span>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">单例模式</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 14px; color: #999">正则表达式</a> <a href="/tags/%E7%BC%93%E5%AD%98%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">缓存中间件</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" style="font-size: 14px; color: #999">软件设计原则</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令速查表"><span class="toc-text">常用命令速查表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#仓库"><span class="toc-text">仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加-删除文件"><span class="toc-text">增加&#x2F;删除文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码提交"><span class="toc-text">代码提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支"><span class="toc-text">分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标签"><span class="toc-text">标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看信息"><span class="toc-text">查看信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#远程同步"><span class="toc-text">远程同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#撤销"><span class="toc-text">撤销</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a></li></ol>
     </div>
   </section>
 
